@@ -193,6 +193,7 @@
 		block=TELEBLOCK
 	OnDrawUnderlays(var/mob/M,var/g,var/fat)
 		return "telekinesishead[fat]_s"
+
 /* CUSTOM ADDITIONS BEYOND THIS LINE
 
 // INCOMPLETE ADDITION - My BYOND skills are slowly coming back, so this should be returned back to. Feel free to modify.
