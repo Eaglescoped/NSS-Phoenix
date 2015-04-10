@@ -193,3 +193,28 @@
 		block=TELEBLOCK
 	OnDrawUnderlays(var/mob/M,var/g,var/fat)
 		return "telekinesishead[fat]_s"
+/* CUSTOM ADDITIONS BEYOND THIS LINE
+
+// INCOMPLETE ADDITION - My BYOND skills are slowly coming back, so this should be returned back to. Feel free to modify.
+/datum/dna/gene/basic/giantism
+	name="Giantism"
+	activation_messages=list("Everything seems smaller around you.")
+	mutation=GI
+	activation_prob=30
+
+	New()
+		block = GiantBlock
+	
+		can_activate(var/mob/M,var/flags)
+		// Hulk would get a boost from this, logically...
+		if(HULK in M.mutations)
+			return 1
+		return ..(M,flags)
+// REMINDER: Code in buff soon. This feature could directly modify Size Scale in player variables.
+//		Addendum: Probably need to add a flag somewhere so that this is identifiable.
+	can_activate(var/mob/M,var/flags)
+		// These two genes would cancel
+		if(mSmallSize in M.mutations)
+			return 0
+		return ..(M,flags)
+*/
